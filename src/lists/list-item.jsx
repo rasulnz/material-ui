@@ -447,7 +447,7 @@ const ListItem = React.createClass({
         fontSize: 16,
         lineHeight: '16px',
         position: 'relative',
-        transition: Transitions.easeOut(),
+        //transition: Transitions.easeOut(),
       },
 
       //This inner div is needed so that ripples will span the entire container
