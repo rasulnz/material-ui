@@ -1,6 +1,4 @@
 import React from 'react';
-import Transitions from '../styles/transitions';
-import DropDownArrow from '../svg-icons/navigation/arrow-drop-down';
 import Menu from '../menus/menu';
 import ClearFix from '../clearfix';
 import getMuiTheme from '../styles/getMuiTheme';
@@ -98,7 +96,7 @@ const DropDownMenu = React.createClass({
 
   getDefaultProps() {
     return {
-      autoWidth: true,
+      autoWidth: false,
       disabled: false,
       openImmediately: false,
       maxHeight: 500,
@@ -141,7 +139,6 @@ const DropDownMenu = React.createClass({
     const {disabled} = this.props;
     const spacing = this.state.muiTheme.rawTheme.spacing;
     const palette = this.state.muiTheme.rawTheme.palette;
-    const accentColor = this.state.muiTheme.dropDownMenu.accentColor;
     return {
       control: {
         cursor: disabled ? 'not-allowed' : 'pointer',
@@ -150,17 +147,15 @@ const DropDownMenu = React.createClass({
         width: '100%',
       },
       icon: {
-        fill: accentColor,
         position: 'absolute',
         right: spacing.desktopGutterLess,
         top: ((spacing.desktopToolbarHeight - 24) / 2),
       },
       label: {
         color: disabled ? palette.disabledColor : palette.textColor,
-        lineHeight: `${spacing.desktopToolbarHeight}px`,
+        lineHeight: '45px',
         opacity: 1,
         position: 'relative',
-        paddingLeft: spacing.desktopGutter,
         paddingRight: spacing.iconSize +
                       spacing.desktopGutterLess +
                       spacing.desktopGutterMini,
@@ -177,16 +172,14 @@ const DropDownMenu = React.createClass({
         display: 'inline-block',
         fontSize: spacing.desktopDropDownMenuFontSize,
         height: spacing.desktopSubheaderHeight,
-        fontFamily: this.state.muiTheme.rawTheme.fontFamily,
         outline: 'none',
         position: 'relative',
-        transition: Transitions.easeOut(),
+        width: '100%',
       },
       underline: {
-        borderTop: `solid 1px ${accentColor}`,
+        borderTop: 'solid 2px #6fcedc',
         bottom: 1,
         left: 0,
-        margin: `-1px ${spacing.desktopGutter}px`,
         right: 0,
         position: 'absolute',
       },
@@ -306,8 +299,7 @@ const DropDownMenu = React.createClass({
             {displayValue}
           </div>
           <span style={TTStyles.triangle}></span>
-          <DropDownArrow style={Object.assign({}, styles.icon, iconStyle)} />
-          <div style={prepareStyles(Object.assign({}, styles.underline, underlineStyle))} />
+          <div style={prepareStyles(Object.assign({}, styles.underline))} />
         </ClearFix>
         <Popover
           anchorOrigin={{horizontal: 'left', vertical: 'top'}}
@@ -319,6 +311,7 @@ const DropDownMenu = React.createClass({
         >
           <Menu
             maxHeight={maxHeight}
+            openDown={'100px'}
             desktop={true}
             value={value}
             style={menuStyle}
@@ -343,6 +336,9 @@ const TTStyles = {
     borderBottom: '2px solid #cacaca',
     WebkitTransform: 'rotate(45deg)',
     marginRight: '2px',
+    position: 'absolute',
+    right: 0,
+    top: '13px',
   },
 };
 

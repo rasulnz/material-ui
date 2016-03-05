@@ -83,6 +83,8 @@ const EnhancedButton = React.createClass({
 
   getDefaultProps() {
     return {
+      disableFocusRipple: true,
+      disableTouchRipple: true,
       containerElement: 'button',
       onBlur: () => {},
       onFocus: () => {},

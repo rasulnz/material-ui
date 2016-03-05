@@ -25,7 +25,7 @@ function getStyles(props, state) {
       transformOrigin: `${horizontal} ${targetOrigin.vertical}`,
       position: 'fixed',
       zIndex: zIndex.popover,
-      transition: Transitions.easeOut('450ms', ['transform', 'opacity']),
+      transition: Transitions.easeOut('0', ['transform', 'opacity']),
       maxHeight: '100%',
     },
   };
