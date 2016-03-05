@@ -441,8 +441,11 @@ const Menu = React.createClass({
 
     if (newWidth < minWidth) newWidth = minWidth;
 
-    el.style.width = `${newWidth}px`;
-    listEl.style.width = `${newWidth}px`;
+    // hard coding auto width for now. since the menu container is gonna be 100% width
+    el.style.width = 'auto';
+    //el.style.width = `${newWidth}px`;
+    listEl.style.width = 'auto';
+    //listEl.style.width = `${newWidth}px`;
   },
 
   render() {
