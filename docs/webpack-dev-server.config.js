@@ -49,17 +49,6 @@ const config = {
     fs: 'js', // To remove once https://github.com/benjamn/recast/pull/238 is released
   },
   module: {
-    //eslint loader
-    preLoaders: [
-      {
-        test: /\.(js|jsx)$/,
-        loader: 'eslint-loader',
-        include: [path.resolve(__dirname, '../src')],
-        exclude: [
-          path.resolve(__dirname, '../src/svg-icons'),
-        ],
-      },
-    ],
     //Allow loading of non-es
     loaders: [
       {
@@ -93,9 +82,6 @@ const config = {
         loader: 'style-loader!css-loader',
       },
     ],
-  },
-  eslint: {
-    configFile: '../.eslintrc',
   },
 };
 
