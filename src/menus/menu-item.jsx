@@ -11,13 +11,6 @@ const nestedMenuStyle = {
   position: 'relative',
 };
 
-const dropDownTriangleStyle = {
-  width: '12px',
-  height: '12px',
-  borderLeft: '1px solid #cacaca',
-  borderBottom: '1px solid #cacaca'
-};
-
 const MenuItem = React.createClass({
 
   propTypes: {
@@ -298,7 +291,6 @@ const MenuItem = React.createClass({
           useLayerForClickAway={false}
           onRequestClose={this._onRequestClose}
         >
-          <span></span>
           <Menu desktop={desktop} disabled={disabled} style={nestedMenuStyle}>
             {React.Children.map(menuItems, this._cloneMenuItem)}
           </Menu>

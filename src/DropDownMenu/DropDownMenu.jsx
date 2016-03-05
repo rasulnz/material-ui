@@ -305,6 +305,7 @@ const DropDownMenu = React.createClass({
           >
             {displayValue}
           </div>
+          <span style={TTStyles.triangle}></span>
           <DropDownArrow style={Object.assign({}, styles.icon, iconStyle)} />
           <div style={prepareStyles(Object.assign({}, styles.underline, underlineStyle))} />
         </ClearFix>
@@ -331,5 +332,18 @@ const DropDownMenu = React.createClass({
   },
 
 });
+
+const TTStyles = {
+  triangle: {
+    width: '12px',
+    height: '12px',
+    display: 'block',
+    float: 'right',
+    borderRight: '2px solid #cacaca',
+    borderBottom: '2px solid #cacaca',
+    WebkitTransform: 'rotate(45deg)',
+    marginRight: '2px',
+  },
+};
 
 export default DropDownMenu;
