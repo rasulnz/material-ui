@@ -15,6 +15,7 @@ function getStyles(props) {
     },
     hideDropDownUnderline: {
       borderTop: 'none',
+      display: 'none',
     },
   };
 }
@@ -101,6 +102,8 @@ const SelectField = React.createClass({
      * Callback function that is fired when the `SelectField` gains focus.
      */
     onFocus: React.PropTypes.func,
+
+    placeholder: React.PropTypes.string,
 
     /**
      * The style object to use to override the `DropDownMenu`.

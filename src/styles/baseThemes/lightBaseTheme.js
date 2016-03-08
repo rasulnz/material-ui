@@ -2,7 +2,7 @@ import {
 cyan500, cyan700,
 pinkA200,
 grey100, grey300, grey400, grey500,
-white, darkBlack, fullBlack,
+white, darkBlack, fullBlack, seafoamBlue,
 } from '../colors';
 import ColorManipulator from '../../utils/color-manipulator';
 import Spacing from '../spacing';
@@ -26,7 +26,7 @@ export default {
     textColor: darkBlack,
     alternateTextColor: white,
     canvasColor: white,
-    borderColor: grey300,
+    borderColor: seafoamBlue,
     disabledColor: ColorManipulator.fade(darkBlack, 0.3),
     pickerHeaderColor: cyan500,
     clockCircleColor: ColorManipulator.fade(darkBlack, 0.07),

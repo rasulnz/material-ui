@@ -7,7 +7,7 @@ import compose from 'lodash.flowright';
 import Typography from '../styles/typography';
 import {
 red500,
-grey400, grey600, grey700,
+grey400, grey600, grey700, seafoamBlue,
 transparent, lightWhite, white, darkWhite, lightBlack,
 } from './colors';
 
