@@ -1,6 +1,5 @@
 import React from 'react';
 import Transitions from '../styles/transitions';
-import DropDownArrow from '../svg-icons/navigation/arrow-drop-down';
 import Menu from '../menus/menu';
 import ClearFix from '../clearfix';
 import getMuiTheme from '../styles/getMuiTheme';
@@ -304,7 +303,7 @@ const DropDownMenu = React.createClass({
           >
             {displayValue}
           </div>
-          <DropDownArrow style={Object.assign({}, styles.icon, iconStyle)} />
+          <span style={TTStyles.triangle}></span>
           <div style={prepareStyles(Object.assign({}, styles.underline, underlineStyle))} />
         </ClearFix>
         <Popover
@@ -328,7 +327,22 @@ const DropDownMenu = React.createClass({
       </div>
     );
   },
-
 });
+
+const TTStyles = {
+  triangle: {
+    width: '12px',
+    height: '12px',
+    display: 'block',
+    float: 'right',
+    borderRight: '2px solid #cacaca',
+    borderBottom: '2px solid #cacaca',
+    WebkitTransform: 'rotate(45deg)',
+    marginRight: '2px',
+    position: 'absolute',
+    top: '15px',
+    right: 0,
+  },
+};
 
 export default DropDownMenu;
