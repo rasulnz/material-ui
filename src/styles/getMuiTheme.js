@@ -1,6 +1,6 @@
 import merge from 'lodash.merge';
 import ColorManipulator from '../utils/color-manipulator';
-import lightBaseTheme from './baseThemes/lightBaseTheme';
+import ttTheme from './baseThemes/ttTheme.js';
 import zIndex from './zIndex';
 import {autoprefixer, callOnce, rtl} from './transformers';
 import compose from 'lodash.flowright';
@@ -22,7 +22,7 @@ export default function getMuiTheme(muiTheme, ...more) {
     zIndex,
     isRtl: false,
     userAgent: undefined,
-  }, lightBaseTheme, muiTheme, ...more);
+  }, ttTheme, muiTheme, ...more);
 
   const {
     spacing,

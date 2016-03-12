@@ -1,5 +1,5 @@
 import React from 'react';
-import FlatButton from 'material-ui/lib/flat-button';
+import {FlatButton,TTButton} from 'material-ui/lib';
 
 const FlatButtonExampleSimple = () => (
   <div>
@@ -7,6 +7,7 @@ const FlatButtonExampleSimple = () => (
     <FlatButton label="Primary" primary={true} />
     <FlatButton label="Secondary" secondary={true} />
     <FlatButton label="Disabled" disabled={true} />
+    <TTButton label="whatever" outline={true}/>
   </div>
 );
 

@@ -22,6 +22,10 @@ import DropDownMenu from './drop-down-menu';
 import EnhancedButton from './enhanced-button';
 import FlatButton from './flat-button';
 import FloatingActionButton from './floating-action-button';
+import TTButton from './TTButton/TTButton';
+import TTButtonOutline from './TTButton/TTButtonOutline';
+import TTButtonRound from './TTButton/TTButtonRound';
+import TTButtonRoundOutline from './TTButton/TTButtonRoundOutline';
 import FontIcon from './font-icon';
 import GridList from './grid-list/grid-list';
 import GridTile from './grid-list/grid-tile';
@@ -135,6 +139,10 @@ export {ToolbarSeparator};
 export {ToolbarTitle};
 export {Tooltip};
 export {Utils};
+export {TTButton};
+export {TTButtonOutline};
+export {TTButtonRound};
+export {TTButtonRoundOutline};
 
 import NavigationMenu from './svg-icons/navigation/menu';
 import NavigationChevronLeft from './svg-icons/navigation/chevron-left';
@@ -215,4 +223,8 @@ export default {
   ToolbarTitle,
   Tooltip,
   Utils,
+  TTButton,
+  TTButtonOutline,
+  TTButtonRound,
+  TTButtonRoundOutline,
 };

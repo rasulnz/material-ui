@@ -85,23 +85,17 @@ const TextFieldUnderline = (props) => {
   const styles = {
     root: {
       border: 'none',
-      borderBottom: 'solid 1px',
-      borderColor: borderColor,
       bottom: 8,
       boxSizing: 'content-box',
       margin: 0,
       position: 'absolute',
       width: '100%',
+      borderBottom: 'solid 2px',
+      borderColor: focusColor,
     },
     disabled: {
       borderBottom: 'dotted 2px',
       borderColor: disabledTextColor,
-    },
-    focus: {
-      borderBottom: 'solid 2px',
-      borderColor: focusColor,
-      transform: 'scaleX(0)',
-      transition: Transitions.easeOut(),
     },
     error: {
       borderColor: errorStyleColor ? errorStyleColor : errorColor,

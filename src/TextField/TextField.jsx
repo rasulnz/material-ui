@@ -35,7 +35,6 @@ const getStyles = (props, state) => {
       position: 'relative',
       backgroundColor: backgroundColor,
       fontFamily: baseTheme.fontFamily,
-      transition: Transitions.easeOut('200ms', 'height'),
     },
     error: {
       position: 'relative',
@@ -43,7 +42,6 @@ const getStyles = (props, state) => {
       fontSize: 12,
       lineHeight: '12px',
       color: errorColor,
-      transition: Transitions.easeOut(),
     },
     floatingLabel: {
       color: hintColor,
