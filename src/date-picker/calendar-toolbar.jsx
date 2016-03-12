@@ -14,13 +14,14 @@ const styles = {
     backgroundColor: 'inherit',
   },
   title: {
+    textTransform: 'uppercase',
+    fontWeight: 600,
     position: 'absolute',
     top: 17,
     lineHeight: '14px',
-    fontSize: 14,
+    fontSize: 11,
     height: 14,
     width: '100%',
-    fontWeight: '500',
     textAlign: 'center',
   },
 };

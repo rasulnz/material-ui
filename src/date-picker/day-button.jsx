@@ -42,6 +42,9 @@ function getStyles(props, state) {
       width: 41,
       padding: '4px 2px',
       opacity: disabled && '0.6',
+      fontSize: 11,
+      fontWeight: 600,
+      color: datePicker.selectColor,
     },
     label: {
       position: 'relative',
@@ -49,9 +52,10 @@ function getStyles(props, state) {
     },
     buttonState: {
       position: 'absolute',
-      height: 36,
-      width: 36,
-      top: 2,
+      height: 31,
+      width: 31,
+      top: 4,
+      left: 5,
       opacity: buttonStateOpacity,
       borderRadius: '50%',
       transform: buttonStateTransform,
