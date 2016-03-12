@@ -27,6 +27,7 @@ const Calendar = React.createClass({
     onDayTouchTap: React.PropTypes.func,
     open: React.PropTypes.bool,
     shouldDisableDate: React.PropTypes.func,
+    hideDateDisplay: React.PropTypes.bool,
   },
 
   contextTypes: {
@@ -39,6 +40,7 @@ const Calendar = React.createClass({
 
   getDefaultProps() {
     return {
+      hideDateDisplay: false,
       disableYearSelection: false,
       initialDate: new Date(),
       minDate: DateTime.addYears(new Date(), -100),
@@ -90,6 +92,24 @@ const Calendar = React.createClass({
         maxDate={this.props.maxDate}
       />
     );
+  },
+
+  _dateDisplayBar(weekCount, styles) {
+    if (this.props.hideDateDisplay) return;
+
+    return (
+        <DateDisplay
+        DateTimeFormat={this.props.DateTimeFormat}
+        locale={this.props.locale}
+        disableYearSelection={this.props.disableYearSelection}
+        selectedDate={this.state.selectedDate}
+        handleMonthDayClick={this._handleMonthDayClick}
+        handleYearClick={this._handleYearClick}
+        monthDaySelected={this.state.displayMonthDay}
+        mode={this.props.mode}
+        weekCount={weekCount}
+        style={styles.dateDisplay}
+        />)
   },
 
   getSelectedDate() {
@@ -299,18 +319,7 @@ const Calendar = React.createClass({
           elementName="window"
           onKeyDown={this._handleWindowKeyDown}
         />
-        <DateDisplay
-          DateTimeFormat={DateTimeFormat}
-          locale={locale}
-          disableYearSelection={this.props.disableYearSelection}
-          style={styles.dateDisplay}
-          selectedDate={this.state.selectedDate}
-          handleMonthDayClick={this._handleMonthDayClick}
-          handleYearClick={this._handleYearClick}
-          monthDaySelected={this.state.displayMonthDay}
-          mode={this.props.mode}
-          weekCount={weekCount}
-        />
+        {this._dateDisplayBar(weekCount, styles)}
         {this.state.displayMonthDay &&
           <div style={prepareStyles(styles.calendarContainer)}>
             <CalendarToolbar

@@ -56,11 +56,16 @@ const DatePicker = React.createClass({
     formatDate: React.PropTypes.func,
 
     /**
+     * hides giant display bar
+     */
+    hideDateDisplay: React.PropTypes.bool,
+    /**
      * Locale used for formatting date. If you are not using the default value, you
      * have to provide a DateTimeFormat that supports it. You can use Intl.DateTimeFormat
      * if it's supported by your environment.
      * https://github.com/andyearnshaw/Intl.js is a good polyfill.
      */
+
     locale: React.PropTypes.string,
 
     /**
@@ -256,6 +261,7 @@ const DatePicker = React.createClass({
       maxDate,
       minDate,
       mode,
+      hideDateDisplay,
       onDismiss,
       onFocus,
       onShow,
@@ -284,6 +290,7 @@ const DatePicker = React.createClass({
         />
         <DatePickerDialog
           container={container}
+          hideDateDisplay={hideDateDisplay}
           ref="dialogWindow"
           DateTimeFormat={DateTimeFormat}
           locale={locale}

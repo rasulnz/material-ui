@@ -25,6 +25,7 @@ const DatePickerDialog = React.createClass({
     onDismiss: React.PropTypes.func,
     onShow: React.PropTypes.func,
     shouldDisableDate: React.PropTypes.func,
+    hideDateDisplay: React.PropTypes.bool,
 
     /**
      * Override the inline-styles of the root element.
@@ -192,6 +193,7 @@ const DatePickerDialog = React.createClass({
           onKeyUp={this._handleWindowKeyUp}
         />
         <Calendar
+          hideDateDisplay={this.props.hideDateDisplay}
           DateTimeFormat={DateTimeFormat}
           firstDayOfWeek={firstDayOfWeek}
           locale={locale}

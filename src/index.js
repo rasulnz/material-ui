@@ -71,6 +71,8 @@ import ToolbarTitle from './toolbar/toolbar-title';
 import Tooltip from './tooltip';
 import Utils from './utils';
 
+import TTDatePicker from './TTDatePicker';
+
 export {AppBar};
 export {AppCanvas};
 export {AutoComplete};
@@ -89,6 +91,7 @@ export {CircularProgress};
 export {ClearFix};
 export {DatePicker};
 export {DatePickerDialog};
+export {TTDatePicker};
 export {Dialog};
 export {Divider};
 export {DropDownMenu};
@@ -173,6 +176,7 @@ export default {
   ClearFix,
   DatePicker,
   DatePickerDialog,
+  TTDatePicker,
   Dialog,
   Divider,
   DropDownMenu,
