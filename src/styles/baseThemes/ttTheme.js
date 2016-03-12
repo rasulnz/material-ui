@@ -15,12 +15,13 @@ import Spacing from '../spacing';
 const COLORS = {
   baseBackground:'#fcfcfc',
   baseGreyDetail:'#e9e9e9',
-  primary1Color:'#6fcedc',
+  primary1Color:'#4cc3d4',
   primary2Color:'#4cc3d4',
   primaryGradient:"linear-gradient(#83e2f0, #74d7e6)",
   primaryDetail: '#4cc3d4',
   secondaryColor:'#50627b',
-  white:'#fff'
+  white:'#fff',
+  alert: '#ef7973'
 };
 
 const FONTS = {
@@ -46,5 +47,6 @@ export default {
     pickerHeaderColor: cyan500,
     clockCircleColor: ColorManipulator.fade(darkBlack, 0.07),
     shadowColor: fullBlack,
+    alertColor: '#ef7973'
   },
 };

@@ -6,7 +6,7 @@ const TTButtonOutline = React.createClass({
 
   render: function() {
     return (
-      <TTButton {...this.props} ttButtonType="outline">{this.props.children}</TTButton>
+      <TTButton {...this.props} outline={true}>{this.props.children}</TTButton>
     );
   },
 });
