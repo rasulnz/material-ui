@@ -23,7 +23,7 @@ function getStyles(props, state) {
 
   let labelColor = baseTheme.palette.textColor;
   let buttonStateOpacity = 0;
-  let buttonStateTransform = 'scale(0)';
+  let buttonStateTransform = 'scale(1)';
 
   if (hover || selected) {
     labelColor = datePicker.selectTextColor;
@@ -55,7 +55,7 @@ function getStyles(props, state) {
       opacity: buttonStateOpacity,
       borderRadius: '50%',
       transform: buttonStateTransform,
-      transition: Transition.easeOut(),
+      //transition: Transition.easeOut(),
       backgroundColor: datePicker.selectColor,
     },
   };

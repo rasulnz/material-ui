@@ -4,7 +4,9 @@
  */
 
 import TTDatePickerInline from './TTDatePickerInline';
+import TTDatePickerBlock from './TTDatePickerBlock';
 
 export default {
     TTDatePickerInline,
+    TTDatePickerBlock,
 }

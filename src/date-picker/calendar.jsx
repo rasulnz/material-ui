@@ -2,7 +2,7 @@ import React from 'react';
 import EventListener from 'react-event-listener';
 import DateTime from '../utils/date-time';
 import keycode from 'keycode';
-import Transitions from '../styles/transitions';
+//import Transitions from '../styles/transitions';
 import CalendarMonth from './calendar-month';
 import CalendarYear from './calendar-year';
 import CalendarToolbar from './calendar-toolbar';
@@ -270,7 +270,7 @@ const Calendar = React.createClass({
         height: weekCount === 5 ? 284 :
           weekCount === 6 ? 324 : 244,
         float: isLandscape ? 'right' : 'none',
-        transition: Transitions.easeOut('150ms', 'height'),
+        //transition: Transitions.easeOut('150ms', 'height'),
         overflow: 'hidden',
       },
       yearContainer: {

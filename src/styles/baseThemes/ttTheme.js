@@ -20,7 +20,8 @@ const COLORS = {
   primaryGradient:"linear-gradient(#83e2f0, #74d7e6)",
   primaryDetail: '#4cc3d4',
   secondaryColor:'#50627b',
-  white:'#fff'
+  white:'#fff',
+  selectColor: '#50627b',
 };
 
 const FONTS = {
@@ -46,5 +47,6 @@ export default {
     pickerHeaderColor: cyan500,
     clockCircleColor: ColorManipulator.fade(darkBlack, 0.07),
     shadowColor: fullBlack,
+    selectColor: COLORS.selectColor,
   },
 };
