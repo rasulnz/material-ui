@@ -1,35 +1,49 @@
 import React from 'react';
 import getMuiTheme from '../styles/getMuiTheme';
 import FlatButton from '../flat-button';
+import FloatingActionButton from '../floating-action-button.jsx';
 import _ from 'lodash';
 
-function getStyles(buttonType, outline, state) {
+function getStyles(buttonType, outline, size, state) {
   const {
     baseTheme,
     } = state.muiTheme;
 
-  console.log(baseTheme)
   const baseButton = {
-    border:'solid 2px ' + baseTheme.palette.primary2Color,
+    border:'solid 2px ' + baseTheme.palette.primary1Color,
+    lineHeight: 'inherit',
+    minWidth:0,
+    margin:'0 10px'
   };
-
+  
   const defaultButton = {
-    background: baseTheme.palette.primary2Color,
+    backgroundColor: baseTheme.palette.primary1Color,
+    color:'#fff'
   };
 
   const outlineButton = {
-    background: 'transparent',
+    backgroundColor: 'transparent',
+    color: baseTheme.palette.primary1Color,
   };
 
-  const roundButton = {
-    borderRadius: '50%'
+  const buttonSizes = {
+    small: {height:'30px', padding:'0 19px', fontSize: '14px', borderRadius: '20px'},
+    medium: {height:'40px', padding:'0 45px',fontSize:'16px', borderRadius: '28px'},
+    large: {height:'50px', fontSize:'18px'},
   };
 
-  let buttonStyle = buttonType == 'round' ? roundButton : defaultButton;
+  const block = {
+    width:'100%',
+    display:'block'
+  };
+
+  let buttonStyle = defaultButton;
 
   outline && _.extend(buttonStyle, outlineButton);
 
-  return _.extend(baseButton, buttonStyle);
+  buttonType == 'block' && _.extend(buttonStyle, block);
+
+  return _.extend(baseButton, buttonStyle, buttonSizes[size] || buttonSizes.medium );
 }
 
 const TTButton = React.createClass({
@@ -59,10 +73,10 @@ const TTButton = React.createClass({
     muiTheme: React.PropTypes.object,
   },
 
-
   //round, outline, default= filled
   propTypes: {
     buttonType: React.PropTypes.string,
+    size: React.PropTypes.string,
     outline: React.PropTypes.bool
   },
 
@@ -76,8 +90,7 @@ const TTButton = React.createClass({
       prepareStyles,
       } = this.state.muiTheme;
 
-    const styles = getStyles(this.props.buttonType, this.props.outline, this.state);
-    console.log(styles);
+    const styles = getStyles(this.props.buttonType, this.props.outline, this.props.size, this.state);
 
     return (
       <FlatButton {...this.props} style={styles}>{this.props.children}</FlatButton>

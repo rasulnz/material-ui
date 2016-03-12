@@ -1,12 +1,12 @@
 import React from 'react';
-import TTButton from './TTButton';
+import TTButtonRound from './TTButtonRound';
 
 
 const TTButtonRoundOutline = React.createClass({
 
   render: function() {
     return (
-      <TTButton {...this.props} ttButtonType="round" >{this.props.children}</TTButton>
+      <TTButtonRound{...this.props} outline={true} >{this.props.children}</TTButtonRound>
     );
   },
 });
