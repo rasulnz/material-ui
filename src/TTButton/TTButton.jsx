@@ -15,7 +15,7 @@ function getStyles(buttonType, outline, size, state) {
     minWidth:0,
     margin:'0 10px'
   };
-  
+
   const defaultButton = {
     backgroundColor: baseTheme.palette.primary1Color,
     color:'#fff'

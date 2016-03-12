@@ -86,7 +86,7 @@ const TextFieldUnderline = (props) => {
     root: {
       border: 'none',
       borderBottom: 'solid 2px',
-      borderColor: borderColor,
+      borderColor: muiTheme.palette.primary1Color,
       bottom: 8,
       boxSizing: 'content-box',
       margin: 0,
