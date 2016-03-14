@@ -4,12 +4,15 @@ import FlatButton from '../flat-button';
 import FloatingActionButton from '../floating-action-button.jsx';
 import _ from 'lodash';
 
-function getStyles(buttonType, outline, size, state) {
+function getStyles(state, props) {
+  const {
+    outline, size, disabled, buttonType
+    } = props;
   const {
     baseTheme,
     } = state.muiTheme;
 
-  const baseButton = {
+  let baseButton = {
     border:'solid 2px ' + baseTheme.palette.primary1Color,
     lineHeight: 'inherit',
     minWidth:0,
@@ -37,13 +40,19 @@ function getStyles(buttonType, outline, size, state) {
     display:'block'
   };
 
+  const disabledStyle = {
+    backgroundColor : '#a4dfe8',
+    borderColor:'#a4dfe8'
+  };
+
   let buttonStyle = defaultButton;
 
   outline && _.extend(buttonStyle, outlineButton);
+  disabled && _.extend(buttonStyle, disabledStyle);
 
   buttonType == 'block' && _.extend(buttonStyle, block);
 
-  return _.extend(baseButton, buttonStyle, buttonSizes[size] || buttonSizes.medium );
+  return _.extend(baseButton, buttonStyle, buttonSizes[size] || buttonSizes.medium);
 }
 
 const TTButton = React.createClass({
@@ -90,7 +99,7 @@ const TTButton = React.createClass({
       prepareStyles,
       } = this.state.muiTheme;
 
-    const styles = getStyles(this.props.buttonType, this.props.outline, this.props.size, this.state);
+    const styles = getStyles(this.state, this.props);
 
     return (
       <FlatButton {...this.props} style={styles}>{this.props.children}</FlatButton>

@@ -26,6 +26,7 @@ import TTButton from './TTButton/TTButton';
 import TTButtonOutline from './TTButton/TTButtonOutline';
 import TTButtonRound from './TTButton/TTButtonRound';
 import TTButtonRoundOutline from './TTButton/TTButtonRoundOutline';
+import TTButtonFlat from './TTButton/TTButtonFlat';
 import FontIcon from './font-icon';
 import GridList from './grid-list/grid-list';
 import GridTile from './grid-list/grid-tile';
@@ -146,6 +147,7 @@ export {TTButton};
 export {TTButtonOutline};
 export {TTButtonRound};
 export {TTButtonRoundOutline};
+export {TTButtonFlat};
 
 import NavigationMenu from './svg-icons/navigation/menu';
 import NavigationChevronLeft from './svg-icons/navigation/chevron-left';
@@ -231,4 +233,5 @@ export default {
   TTButtonOutline,
   TTButtonRound,
   TTButtonRoundOutline,
+  TTButtonFlat
 };
