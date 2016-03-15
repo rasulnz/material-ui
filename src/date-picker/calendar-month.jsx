@@ -74,7 +74,7 @@ const CalendarMonth = React.createClass({
     const styles = {
       lineHeight: '32px',
       textAlign: 'center',
-      padding: '16px 14px 0 14px',
+      padding: '0 14px 0 14px',
     };
 
     return (

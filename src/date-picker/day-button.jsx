@@ -39,7 +39,7 @@ function getStyles(props, state) {
       WebkitTapHighlightColor: 'rgba(0,0,0,0)', // Remove mobile color flashing (deprecated)
       position: 'relative',
       float: 'left',
-      width: 41,
+      width: 37,
       padding: '4px 2px',
       opacity: disabled && '0.6',
       fontSize: 11,
@@ -55,7 +55,7 @@ function getStyles(props, state) {
       height: 31,
       width: 31,
       top: 4,
-      left: 5,
+      left: 4,
       opacity: buttonStateOpacity,
       borderRadius: '50%',
       transform: buttonStateTransform,

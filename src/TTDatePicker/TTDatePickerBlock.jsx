@@ -54,7 +54,7 @@ const TTDatePickerBlock = React.createClass({
 
 var styles = {
     root: {
-        maxWidth: '315px',
+        maxWidth: '296px',
     }
 };
 

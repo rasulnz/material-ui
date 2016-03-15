@@ -12,6 +12,13 @@ const styles = {
     position: 'relative',
     padding: 0,
     backgroundColor: 'inherit',
+    height: 48,
+  },
+  right: {
+    left: '-67px',
+  },
+  left: {
+    right: '-67px',
   },
   title: {
     textTransform: 'uppercase',
@@ -22,8 +29,12 @@ const styles = {
     fontSize: 11,
     height: 14,
     width: '100%',
+    color: getMuiTheme().palette.selectColor,
     textAlign: 'center',
   },
+  icon: {
+    fill: getMuiTheme().palette.primary1Color,
+  }
 };
 
 const CalendarToolbar = React.createClass({
@@ -106,17 +117,18 @@ const CalendarToolbar = React.createClass({
     return (
       <Toolbar style={styles.root} noGutter={true}>
         <span style={styles.title}>{dateTimeFormatted}</span>
-        <ToolbarGroup key={0} float="left">
+        <ToolbarGroup key={0} style={styles.left} float="left">
           <IconButton
+            iconStyle={styles.icon}
             style={styles.button}
             disabled={!this.props.prevMonth}
-            onTouchTap={this.handleTouchTapPrevMonth}
-          >
+            onTouchTap={this.handleTouchTapPrevMonth}>
             {nextButtonIcon}
           </IconButton>
         </ToolbarGroup>
-        <ToolbarGroup key={1} float="right">
+        <ToolbarGroup key={1} style={styles.right} float="right">
           <IconButton
+            iconStyle={styles.icon}
             style={styles.button}
             disabled={!this.props.nextMonth}
             onTouchTap={this.handleTouchTapNextMonth}

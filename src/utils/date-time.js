@@ -20,6 +20,8 @@ function DateTimeFormat(locale, options) {
       output = `${monthLongList[date.getMonth()]} ${date.getFullYear()}`;
     } else if (options.weekday === 'narrow') {
       output = dayAbbreviation[date.getDay()];
+    } else if (options.weekday === 'short') {
+      output = dayList[date.getDay()];
     } else {
       warning(false, 'Wrong usage of DateTimeFormat');
     }
@@ -128,7 +130,7 @@ export default {
   },
 
   localizedWeekday(DateTimeFormat, locale, day, firstDayOfWeek) {
-    const weekdayFormatter = new DateTimeFormat(locale, {weekday: 'narrow'});
+    const weekdayFormatter = new DateTimeFormat(locale, {weekday: 'short'});
     const firstDayDate = this.getFirstDayOfWeek();
 
     return weekdayFormatter.format(this.addDays(firstDayDate, day + firstDayOfWeek));

@@ -292,7 +292,6 @@ const Calendar = React.createClass({
       weekTitle: {
         padding: '0 14px',
         lineHeight: '12px',
-        opacity: '0.5',
         height: 12,
         fontWeight: '500',
         margin: 0,
@@ -300,9 +299,14 @@ const Calendar = React.createClass({
       weekTitleDay: {
         listStyle: 'none',
         float: 'left',
-        width: 37,
+        width: 33,
         textAlign: 'center',
         margin: '0 2px',
+        textTransform: 'uppercase',
+        fontSize: '8px',
+        color: this.state.muiTheme.palette.selectColor,
+        fontWeight: 900,
+        opacity: 1,
       },
     };
 
