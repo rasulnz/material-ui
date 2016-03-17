@@ -21,7 +21,7 @@ function getStyles(props, state) {
     datePicker,
   } = state.muiTheme;
 
-  let labelColor = baseTheme.palette.textColor;
+  let labelColor = baseTheme.palette.selectColor;
   let buttonStateOpacity = 0;
   let buttonStateTransform = 'scale(1)';
 
@@ -40,7 +40,7 @@ function getStyles(props, state) {
       position: 'relative',
       float: 'left',
       width: 37,
-      padding: '4px 2px',
+      padding: '1px 2px',
       opacity: disabled && '0.6',
       fontSize: 11,
       fontWeight: 600,
@@ -52,10 +52,10 @@ function getStyles(props, state) {
     },
     buttonState: {
       position: 'absolute',
-      height: 31,
-      width: 31,
+      height: 29,
+      width: 29,
       top: 4,
-      left: 4,
+      left: 3,
       opacity: buttonStateOpacity,
       borderRadius: '50%',
       transform: buttonStateTransform,
