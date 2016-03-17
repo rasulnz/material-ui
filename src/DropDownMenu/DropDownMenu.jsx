@@ -304,7 +304,6 @@ const DropDownMenu = React.createClass({
             {displayValue}
           </div>
           <span style={TTStyles.triangle}></span>
-          <div style={prepareStyles(Object.assign({}, styles.underline, underlineStyle))} />
         </ClearFix>
         <Popover
           anchorOrigin={{horizontal: 'left', vertical: 'top'}}

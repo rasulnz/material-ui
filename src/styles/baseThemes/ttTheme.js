@@ -21,7 +21,8 @@ const COLORS = {
   primaryDetail: '#4cc3d4',
   secondaryColor:'#50627b',
   white:'#fff',
-  alert: '#ef7973'
+  alert: '#ef7973',
+  selectColor: '#50627b',
 };
 
 const FONTS = {
@@ -47,6 +48,7 @@ export default {
     pickerHeaderColor: cyan500,
     clockCircleColor: ColorManipulator.fade(darkBlack, 0.07),
     shadowColor: fullBlack,
-    alertColor: '#ef7973'
+    alertColor: COLORS.alert,
+    selectColor: COLORS.selectColor,
   },
 };
