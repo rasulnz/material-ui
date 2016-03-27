@@ -287,7 +287,10 @@ const DropDownMenu = React.createClass({
 
     let popoverStyle;
     if (anchorEl && !autoWidth) {
-      popoverStyle = {width: anchorEl.clientWidth};
+      popoverStyle = {
+          width: anchorEl.clientWidth,
+          marginTop: 40,
+      };
     }
 
     return (

@@ -20,9 +20,11 @@ const COLORS = {
   primaryGradient:"linear-gradient(#83e2f0, #74d7e6)",
   primaryDetail: '#4cc3d4',
   secondaryColor:'#50627b',
+  menuITemColor: '#4a4a4a',
   white:'#fff',
   alert: '#ef7973',
   selectColor: '#50627b',
+  hoverColor: '#f5f5f5',
 };
 
 const FONTS = {
@@ -50,5 +52,7 @@ export default {
     shadowColor: fullBlack,
     alertColor: COLORS.alert,
     selectColor: COLORS.selectColor,
+    menuITemColor: COLORS.menuITemColor,
+    hoverColor: COLORS.hoverColor,
   },
 };

@@ -215,23 +215,26 @@ const MenuItem = React.createClass({
     } = this.state.muiTheme;
 
     const disabledColor = this.state.muiTheme.rawTheme.palette.disabledColor;
-    const textColor = this.state.muiTheme.rawTheme.palette.textColor;
+    //const textColor = this.state.muiTheme.rawTheme.palette.textColor;
+    const textColor = getMuiTheme().palette.menuITemColor;
     const leftIndent = desktop ? 64 : 72;
-    const sidePadding = desktop ? 24 : 16;
+    //const sidePadding = desktop ? 24 : 16;
+    const sidePadding = 12;
 
     const styles = {
       root: {
         color: disabled ? disabledColor : textColor,
         lineHeight: desktop ? '32px' : '48px',
-        fontSize: desktop ? 15 : 16,
+        //fontSize: desktop ? 15 : 16,
+        fontSize: 16,
         whiteSpace: 'nowrap',
       },
 
       innerDivStyle: {
         paddingLeft: leftIcon || insetChildren || checked ? leftIndent : sidePadding,
         paddingRight: sidePadding,
-        paddingBottom: 0,
-        paddingTop: 0,
+        paddingBottom: 4,
+        paddingTop: 4,
       },
 
       secondaryText: {

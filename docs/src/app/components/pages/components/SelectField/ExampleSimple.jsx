@@ -6,7 +6,7 @@ export default class SelectFieldExampleSimple extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {value: 2};
+    this.state = {value: null};
   }
 
   handleChange = (event, index, value) => this.setState({value});
@@ -14,7 +14,7 @@ export default class SelectFieldExampleSimple extends React.Component {
   render() {
     return (
       <div>
-        <SelectField value={this.state.value} onChange={this.handleChange}>
+        <SelectField value={this.state.value} hintText="hello world" onChange={this.handleChange}>
           <MenuItem value={1} primaryText="Never" />
           <MenuItem value={2} primaryText="Every Night" />
           <MenuItem value={3} primaryText="Weeknights" />

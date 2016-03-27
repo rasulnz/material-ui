@@ -502,11 +502,15 @@ const Menu = React.createClass({
       },
 
       list: {
-        display: 'table-cell',
-        paddingBottom: desktop ? 16 : 8,
-        paddingTop: desktop ? 16 : 8,
+        //display: 'table-cell',
+        display: 'block',
+        //paddingBottom: desktop ? 16 : 8,
+        paddingBottom: desktop ? 0 : 8,
+        //paddingTop: desktop ? 16 : 8,
+        paddingTop: desktop ? 0 : 8,
         userSelect: 'none',
-        width: width,
+        //width: width,
+        width: '100%',
       },
 
       menuItemContainer: {
@@ -524,7 +528,9 @@ const Menu = React.createClass({
       },
 
       selectedMenuItem: {
-        color: rawTheme.palette.accent1Color,
+        //color: rawTheme.palette.accent1Color,
+        color: getMuiTheme().palette.primary1Color,
+        fontWeight: 600,
       },
     };
 
