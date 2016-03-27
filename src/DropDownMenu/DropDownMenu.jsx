@@ -290,6 +290,7 @@ const DropDownMenu = React.createClass({
       popoverStyle = {
           width: anchorEl.clientWidth,
           marginTop: 40,
+          borderRadius: '0px 0px 6px 6px',
       };
     }
 

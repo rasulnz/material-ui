@@ -494,6 +494,7 @@ const Menu = React.createClass({
         right: openLeft ? 0 : null,
         transform: animated ? 'scaleX(0)' : null,
         transformOrigin: openLeft ? 'right' : 'left',
+        borderRadius: '0px 0px 6px 6px',
       },
 
       divider: {
@@ -511,6 +512,7 @@ const Menu = React.createClass({
         userSelect: 'none',
         //width: width,
         width: '100%',
+        borderRadius: '0px 0px 6px 6px',
       },
 
       menuItemContainer: {
@@ -525,6 +527,7 @@ const Menu = React.createClass({
         opacity: 0,
         maxHeight: maxHeight,
         overflowY: maxHeight ? 'auto' : null,
+        borderRadius: '0px 0px 6px 6px',
       },
 
       selectedMenuItem: {
