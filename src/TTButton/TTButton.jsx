@@ -1,7 +1,7 @@
 import React from 'react';
 import getMuiTheme from '../styles/getMuiTheme';
 import FlatButton from '../flat-button';
-import FloatingActionButton from '../floating-action-button.jsx';
+import FloatingActionButton from '../floating-action-button';
 import _ from 'lodash';
 
 function getStyles(state, props) {

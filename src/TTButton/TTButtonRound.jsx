@@ -1,6 +1,6 @@
 import React from 'react';
 import getMuiTheme from '../styles/getMuiTheme';
-import FlatButton from '../flat-button.jsx';
+import FlatButton from '../flat-button';
 import _ from 'lodash';
 
 function getStyles(state, props) {
