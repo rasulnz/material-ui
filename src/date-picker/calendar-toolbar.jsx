@@ -31,6 +31,7 @@ const styles = {
     width: '100%',
     color: getMuiTheme().palette.selectColor,
     textAlign: 'center',
+    left: 0
   },
   icon: {
     fill: getMuiTheme().palette.primary1Color,
